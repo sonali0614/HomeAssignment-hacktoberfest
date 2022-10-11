@@ -11,6 +11,14 @@ int fun1(int x)
 		y++;
 	}
 	cout<<y<<"\n";
+	int main(){
+	int x = 6;
+	fun1(x);
+}
+	int main(){
+	int x = 6;
+	fun1(x);
+}
 }
 
 int main(){
