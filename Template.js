@@ -22,7 +22,17 @@ function if_validateEmail(email) {
 	return re.test(String(email).toLowerCase());
 }
 
+function if_validateEmail(email) {
+	window.alert('validating email');
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+}
 
+function if_validateEmail(email) {
+	window.alert('validating email');
+	const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+}
 
 function makeGetRequest(path) {
 }
@@ -98,6 +108,17 @@ function makeGetRequest(path) {
 	);
 }
 
+function makePostRequest(path, queryObject) {
+	axios.post(api_url + path, queryObject).then(
+		(response) => {
+			var returnObj = response.data;
+			return returnObj;
+		},
+		(error) => {
+			return error;
+		}
+	);
+}
 function makePostRequest(path, queryObject) {
 	axios.post(api_url + path, queryObject).then(
 		(response) => {
